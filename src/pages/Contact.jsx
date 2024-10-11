@@ -3,7 +3,7 @@ import { FaWhatsapp, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/
 import Header from "../components/layouts/Header";
 import Footer from "../components/layouts/Footer";
 import contacto from '../img/contacto.jpg';
-import contacto1 from '../img/contacto1.png';
+import contacto1 from '../img/Contacto1.png';
 
 function Contact() {
   const [formData, setFormData] = useState({
