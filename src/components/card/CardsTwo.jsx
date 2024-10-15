@@ -12,58 +12,67 @@ import Celular from "../../img/Celular.png";
 const CardsTwo = () => {
   return (
     <div
-      className="relative flex items-center justify-center p-8 bg-gray-100 h-screen"
+      className="relative flex items-center justify-center p-8 h-screen bg-gray-100"
       style={{
         backgroundImage: `url(${Celular})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        boxShadow: '1px 1px 10px black', 
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        boxShadow: "1px 1px 10px black",
       }}
     >
-      <div className="absolute inset-0 bg-black opacity-70 z-0"></div>
+      {/* Overlay con gradiente */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black opacity-80 z-0"></div>
 
+      {/* Contenido */}
       <div className="relative z-10 flex flex-col items-center justify-center w-full max-w-4xl text-center">
-        <h2 className="pb-10 text-2xl lg:text-3xl font-bold text-white">
+        {/* Título */}
+        <h2 className="pb-10 text-3xl lg:text-4xl font-extrabold text-white">
           ¿Qué necesitas para solicitar un crédito?
         </h2>
 
+        {/* Tarjetas */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 w-full">
-          <div className="flex flex-col items-center bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <FaUserAlt className="text-[#0000ff] text-5xl mb-4" />
-            <p className="text-center text-gray-700 font-medium">
+          {/* Tarjeta 1 */}
+          <div className="flex flex-col items-center bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out">
+            <FaUserAlt className="text-blue-600 text-6xl mb-6" />
+            <p className="text-center text-gray-800 text-lg font-semibold">
               Ser colombiano mayor de edad (18 años) y vivir en Colombia
             </p>
           </div>
 
-          <div className="flex flex-col items-center bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <FaPiggyBank className="text-[#0000ff] text-5xl mb-4" />
-            <p className="text-center text-gray-700 font-medium">
+          {/* Tarjeta 2 */}
+          <div className="flex flex-col items-center bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out">
+            <FaPiggyBank className="text-blue-600 text-6xl mb-6" />
+            <p className="text-center text-gray-800 text-lg font-semibold">
               Ser titular de una cuenta bancaria activa y a tu nombre
             </p>
           </div>
 
-          <div className="flex flex-col items-center bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <FaEnvelope className="text-[#0000ff] text-5xl mb-4" />
-            <p className="text-center text-gray-700 font-medium">
+          {/* Tarjeta 3 */}
+          <div className="flex flex-col items-center bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out">
+            <FaEnvelope className="text-blue-600 text-6xl mb-6" />
+            <p className="text-center text-gray-800 text-lg font-semibold">
               Tener una cuenta de e-mail personal activa
             </p>
           </div>
 
-          <div className="flex flex-col items-center bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <FaMobileAlt className="text-[#0000ff] text-5xl mb-4" />
-            <p className="text-center text-gray-700 font-medium">
+          {/* Tarjeta 4 */}
+          <div className="flex flex-col items-center bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out">
+            <FaMobileAlt className="text-blue-600 text-6xl mb-6" />
+            <p className="text-center text-gray-800 text-lg font-semibold">
               Tener un número celular activo
             </p>
           </div>
         </div>
 
-        <div className="flex justify-center mt-10">
+        {/* Botón de WhatsApp */}
+        <div className="flex justify-center mt-12">
           <a
             href="https://wa.me/your-phone-number"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center space-x-2 bg-green-500 text-white font-bold py-2 px-6 rounded-full hover:bg-green-600 transition duration-300 ease-in-out"
+            className="flex items-center space-x-3 bg-gradient-to-r from-green-400 to-green-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
           >
             <FaWhatsapp className="w-6 h-6" />
             <span>Solicita tu crédito</span>
